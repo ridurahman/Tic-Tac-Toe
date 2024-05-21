@@ -121,6 +121,13 @@ function calculateWinner(squares) {
       return squares[a];
     }
   }
-
+  // let noWinner = squares.filter((square) => !square);
+  // // console.log(noWinner);
+  // if (noWinner.length == 0) {
+  //   return "No Winner or looser!";
+  // }
+  if (!squares.some((square) => !square)) {
+    return "No Winner!";
+  }
   return null;
 }
